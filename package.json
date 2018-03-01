@@ -1,0 +1,27 @@
+{
+  "name": "mutest",
+  "version": "1.0.0",
+  "description": "Mudano test project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BorisLevanov/Test.git"
+  },
+  "author": "Boris Levanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BorisLevanov/Test/issues"
+  },
+  "homepage": "https://github.com/BorisLevanov/Test#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "jshint": "^2.9.5"
+  },
+  "devDependencies": {
+    "wdio-jasmine-framework": "^0.3.2",
+    "webdriverio": "^4.11.0"
+  }
+}
