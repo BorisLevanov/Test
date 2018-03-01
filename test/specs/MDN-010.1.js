@@ -9,15 +9,18 @@ describe('login form', function () {
         LoginPage.password.setValue('bar');
         LoginPage.submit();
 
-        expect(LoginPage.flash.getText()).to.contain('Your username is invalid!');
+        // Wait for the validion
+        browser.waitForVisible('[role="alert"]');
+
+        expect(LoginPage.pageBody.getText()).to.contain('Oops! Could not authenticate user');
     });
 
     it('should allow access with correct creds', function () {
         LoginPage.open();
-        LoginPage.username.setValue('tomsmith');
-        LoginPage.password.setValue('SuperSecretPassword!');
+        LoginPage.username.setValue('admin');        
+        LoginPage.password.setValue('123456');
         LoginPage.submit();
 
-        expect(LoginPage.flash.getText()).to.contain('You logged into a secure area!');
+        expect(LoginPage.pageBody.getText()).to.contain('You logged into a secure area!');
     });
 });
