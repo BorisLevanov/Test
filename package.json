@@ -4,7 +4,9 @@
   "description": "Mudano test project",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/wdio wdio.conf.js"
+    "start": "webdriver-manager update && webdriver-manager start",
+    "test": "./node_modules/.bin/wdio wdio.conf.js",
+    "debug": "./node_modules/.bin/wdio wdio.conf.debug.js"
   },
   "repository": {
     "type": "git",

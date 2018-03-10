@@ -1,4 +1,7 @@
-// login.page.js
+/**
+ * Tasks PageObject
+ * 
+ */
 var Page = require('./page');
 
 var LoginPage = Object.create(Page, {
@@ -7,6 +10,7 @@ var LoginPage = Object.create(Page, {
      */
     // Elements
     signOutButton:      { get: function () { return browser.element('a*=Sign Out'); } },
+    navBar:             { get: function () { return browser.element('#bs-example-navbar-collapse-1'); } },
 
     /**
      * define or overwrite page methods

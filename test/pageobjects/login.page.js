@@ -1,4 +1,7 @@
-// login.page.js
+/**
+ * Login PageObject
+ * 
+ */
 var Page = require('./page');
 
 var LoginPage = Object.create(Page, {

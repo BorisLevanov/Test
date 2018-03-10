@@ -1,10 +1,12 @@
-// login.spec.js
+/**
+ * LGN - Tasks component
+ */
+
 var expect = require('chai').expect;
-var LoginPage = require('../pageobjects/login.page');
-var TasksPage = require('../pageobjects/tasks.page');
+var TasksPage = require('../../pageobjects/tasks.page');
 
 
-describe('A user should be able to log in.', function () {
+describe('A user can add, edit and remove tasks.', function () {
     it('Given a user logs in with incorrect credentials, a validation message should appear.', function () {
         LoginPage.open();
         LoginPage.username.setValue('foo');
@@ -55,4 +57,6 @@ describe('A user should be able to log in.', function () {
         expect(LoginPage.pageBody.getText()).to.contain('My Tasks');
         TasksPage.signOutButton.click();
     });
+
+    
 });
