@@ -20,7 +20,7 @@ var Util = Object.create(Page, {
     generateNumber: {
         value: function (maxValue) {
      
-            return Math.random() * maxValue;
+            return Math.floor(Math.random() * maxValue);
         }
     },
 
@@ -40,6 +40,8 @@ var Util = Object.create(Page, {
             } 
             
             today = dd + '/' + mm + '/' + yyyy;
+            console.log("====="+today);
+            return today;
         }
     }
 });
