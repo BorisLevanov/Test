@@ -9,6 +9,7 @@ var LoginPage = Object.create(Page, {
      * define elements
      */
     // Elements
+    pageBody:           { get: function () { return browser.element('.container'); } },    
     tasksTable:           { get: function () { return browser.element('tbody'); } },
 
     signOutButton:      { get: function () { return browser.element('a*=Sign Out'); } },

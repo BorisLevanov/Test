@@ -1,7 +1,7 @@
 /**
- * LGN - Login component
+ * PRV - Privileges component
  */
-
+// TODO: perform thorough check of functionality
 var expect = require('chai').expect;
 var LoginPage = require('../../pageobjects/login.page');
 var TasksPage = require('../../pageobjects/tasks.page');
@@ -21,8 +21,8 @@ describe('A user can access parts of the website based on their privileges.', fu
         expect(TasksPage.navBar.getText()).not.to.contain('Users');
         
         browser.url('/#/users');
-        browser.debug();
-        expect(browser.getUrl().not.toContain('Add/Edit Users'));
+        expect(TasksPage.pageBody.getText()).not.to.contain('Add/Edit Users');
+        // TODO: find method to check current URL
 
         TasksPage.signOutButton.click();
 
@@ -35,7 +35,6 @@ describe('A user can access parts of the website based on their privileges.', fu
         LoginPage.password.clearElement();
         LoginPage.password.setValue('123456');
         LoginPage.submit();
-        browser.debug();
 
         TasksPage.signOutButton.waitForVisible(10000);
         expect(LoginPage.pageBody.getText()).to.contain('My Tasks');

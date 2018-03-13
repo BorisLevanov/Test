@@ -1,5 +1,5 @@
 /**
- * LGN - Tasks component
+ * TSK - Tasks component
  */
 var ks = require('node-key-sender');
 var expect = require('chai').expect;
@@ -48,5 +48,5 @@ describe('A user can add tasks.', function () {
         
         expect(TasksPage.tasksTable.getText()).to.contain(randomPhrase);
         TasksPage.signOutButton.click();
-    });   
+    }, 60000);   
 });
