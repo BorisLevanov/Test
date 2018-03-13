@@ -4,7 +4,9 @@
   "description": "Mudano test project",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/wdio wdio.conf.js"
+    "start": "webdriver-manager update && webdriver-manager start",
+    "test": "./node_modules/.bin/wdio wdio.conf.js",
+    "debug": "./node_modules/.bin/wdio wdio.conf.debug.js"
   },
   "repository": {
     "type": "git",
@@ -18,10 +20,12 @@
   "homepage": "https://github.com/BorisLevanov/Test#readme",
   "dependencies": {
     "chai": "^4.1.2",
-    "jshint": "^2.9.5"
+    "jshint": "^2.9.5",
+    "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "devDependencies": {
+    "node-key-sender": "^1.0.10",
     "wdio-jasmine-framework": "^0.3.2",
-    "webdriverio": "^4.11.0"
+    "webdriverio": "^4.12.0"
   }
 }
